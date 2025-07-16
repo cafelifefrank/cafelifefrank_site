@@ -1,53 +1,375 @@
-Support Frank's Coffee Van body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f9f9f9; color: #333; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; } h1, h2 { text-align: center; color: #2c3e50; } .amount { background: #ecf0f1; padding: 10px; margin: 20px 0; border-left: 5px solid #3498db; font-size: 1.2em; } .quote { font-style: italic; text-align: center; margin: 20px 0; color: #7f8c8d; } .wallet { background: #fff; padding: 15px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); } .wallet p { margin: 5px 0; font-weight: bold; } .wallet button { background-color: #3498db; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-top: 5px; } footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #999; } Help Me Build My Coffee Van ☕🚐 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Frank's Coffee Van Dream | Fresh Start with Purpose</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --coffee-dark: #3E2723;
+            --coffee-medium: #5D4037;
+            --coffee-light: #8D6E63;
+            --cream: #F5F5F5;
+            --accent: #D7CCC8;
+            --highlight: #A1887F;
+            --text-dark: #212121;
+            --text-light: #757575;
+            --success: #388E3C;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--cream);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--coffee-dark);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--coffee-medium);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .story-section {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--coffee-medium);
+            text-align: center;
+            padding: 30px;
+            margin: 40px 0;
+            border-left: 4px solid var(--highlight);
+            background-color: rgba(141, 110, 99, 0.05);
+        }
+        
+        .progress-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .progress-bar-container {
+            height: 12px;
+            background-color: #E0E0E0;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--coffee-light), var(--coffee-medium));
+            width: 0%;
+            transition: width 1s ease;
+            border-radius: 6px;
+        }
+        
+        .donation-section {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .wallet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .wallet-card {
+            background: var(--cream);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--accent);
+            transition: transform 0.3s ease;
+        }
+        
+        .wallet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .wallet-card h3 {
+            margin-top: 0;
+            color: var(--coffee-medium);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .wallet-address {
+            font-family: monospace;
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            word-break: break-all;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            border: 1px solid #E0E0E0;
+        }
+        
+        .wallet-address:hover {
+            background: #FAFAFA;
+        }
+        
+        .copy-message {
+            color: var(--success);
+            font-size: 0.8rem;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .social-section {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--coffee-medium);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: rgba(141, 110, 99, 0.1);
+            color: var(--coffee-dark);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .story-section, .donation-section {
+                padding: 30px 20px;
+            }
+            
+            .wallet-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Help Frank Build His Dream Coffee Van</h1>
+            <p class="subtitle">From hardship to hope - your support can fuel a fresh start and help children in need</p>
+            <!-- Replace with actual image -->
+            <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Coffee van concept" class="hero-image">
+        </header>
+        
+        <section class="story-section">
+            <h2>My Story</h2>
+            <p>Hi, I'm Frank. After 15 years running a small café, the pandemic took everything I'd built. But rather than give up, I see this as an opportunity to create something even more meaningful.</p>
+            
+            <p>With your help, I want to convert a van into a mobile coffee shop that can:</p>
+            <ul>
+                <li>Bring specialty coffee to neighborhoods across the city</li>
+                <li>Provide employment opportunities</li>
+                <li>Donate 20% of all profits to children's hospitals</li>
+            </ul>
+            
+            <div class="quote">
+                "God loves hands that help more than lips that pray."
+            </div>
+            
+            <p>This isn't just about coffee - it's about community, resilience, and turning hardship into hope. Every contribution, no matter how small, helps write this new chapter.</p>
+        </section>
+        
+        <section class="progress-container">
+            <div class="progress-stats">
+                <span>Raised: <strong id="raisedAmount">$0</strong></span>
+                <span>Goal: <strong>$150,000</strong></span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p>Join <span id="backerCount">0</span> supporters who believe in this vision</p>
+        </section>
+        
+        <section class="donation-section">
+            <h2>Support With Crypto</h2>
+            <p>Your cryptocurrency donation helps make this dream a reality. Every contribution makes a difference.</p>
+            
+            <div class="wallet-grid">
+                <div class="wallet-card">
+                    <h3>USDT (TON)</h3>
+                    <div class="wallet-address" onclick="copyAddress(this)">UQ3xgaorWVKRIIIRJB4...</div>
+                    <div class="copy-message">Copied!</div>
+                </div>
+                
+                <div class="wallet-card">
+                    <h3>Bitcoin (BTC)</h3>
+                    <div class="wallet-address" onclick="copyAddress(this)">bc1qtttcuhrsd48Px3VEH/V...</div>
+                    <div class="copy-message">Copied!</div>
+                </div>
+                
+                <div class="wallet-card">
+                    <h3>Ethereum (ETH)</h3>
+                    <div class="wallet-address" onclick="copyAddress(this)">0x71C7656EC7ab88b098defB...</div>
+                    <div class="copy-message">Copied!</div>
+                </div>
+                
+                <div class="wallet-card">
+                    <h3>Dogecoin (DOGE)</h3>
+                    <div class="wallet-address" onclick="copyAddress(this)">DGGjJQmQqHnMjKqXaYdZ...</div>
+                    <div class="copy-message">Copied!</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="social-section">
+            <h2>Follow the Journey</h2>
+            <p>Watch this dream come to life and see the impact of your support</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">TikTok</a>
+            </div>
+        </section>
+        
+        <footer>
+            <p>With gratitude,</p>
+            <p><strong>Frank</strong></p>
+            <p>© 2023 Fresh Start Coffee | All contributions go directly to van conversion and initial operating costs</p>
+        </footer>
+    </div>
 
-I'm Frank — I lost my business but not my hope. With your support, I’m starting fresh with a dream: turning a van into a coffee shop to earn a living and help the community.
-
-🎯 Goal: $150,000 | Raised: $0 
-
-"God loves hands that help more than lips that pray." 
-
-I, Frank, will never forget your kindness. After launching the coffee van, I’ll donate a portion of my income forever to help children in need. ❤️
-
-Donate with Crypto 
-
-USDT (TON): UQBxgaorWWKRliRJZ4h_ts1VqhaTdQob0bQMaouXS4UNAWxI
-
-Copy 
-
-BTC: bc1qttcuhr3u47x83tnke48hluhzcm3dl8ctzytaht
-
-Copy 
-
-ETH: 0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f
-
-Copy 
-
-BCH: qpg7xqp8fv3nrehk7zgs7aj67wyvwllxlcgs5f9nqs
-
-Copy 
-
-DOGE: DJJjYxzWh4dvURBs32tYH1Qe6W1XPZYNtd
-
-Copy 
-
-FTM / BNB / ETH (same address): 0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f
-
-Copy 
-
-TON: UQAELlWgrJ8_sX4o-uElc2Bj00ME0bkxbTmwLlYDQfu4SeW4
-
-Copy 
-
-SOL: GLu2BUsam7tyAhTo4c4ACYKMTSYeyqpTxKAb5choDDhV
-
-Copy 
-
-TRX: TN67UXQbJjoYRZq3nKiYMSCp3KW74VFogJ
-
-Copy 
-
-SUI: 0x137f36e13b9bf312a238ca3c3a04c944ace8cda5fad0e9fd8f4c69c5584ab150
-
-Copy 
-
-Thank you for being part of my dream — with love, Frank ❤️ function copyText(id) { const text = document.getElementById(id).innerText; navigator.clipboard.writeText(text).then(() => { alert('Address copied to clipboard!'); }); } 
+    <script>
+        // Animated progress bar
+        let raised = 0;
+        const goal = 150000;
+        let backers = 0;
+        
+        // Simulate donations coming in (replace with real data)
+        setInterval(() => {
+            if (raised < 23750) { // Simulate reaching $23,750
+                raised += Math.floor(Math.random() * 200) + 50;
+                backers += 1;
+                
+                document.getElementById('raisedAmount').textContent = '$' + raised.toLocaleString();
+                document.getElementById('backerCount').textContent = backers;
+                
+                const progressPercent = (raised / goal) * 100;
+                document.getElementById('progressBar').style.width = progressPercent + '%';
+                
+                if (progressPercent > 50) {
+                    document.getElementById('progressBar').style.background = 'linear-gradient(90deg, var(--coffee-light), var(--highlight))';
+                }
+            }
+        }, 1500);
+        
+        // Copy wallet address functionality
+        function copyAddress(element) {
+            const text = element.textContent;
+            navigator.clipboard.writeText(text.trim());
+            
+            // Show copied message
+            const message = element.nextElementSibling;
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 2000);
+        }
+        
+        // Allow manual editing of donation amount (for demo purposes)
+        document.getElementById('raisedAmount').addEventListener('dblclick', function() {
+            const currentAmount = this.textContent.replace('$', '').replace(/,/g, '');
+            const input = document.createElement('input');
+            input.type = 'number';
+            input.value = currentAmount;
+            input.style.width = '100px';
+            input.style.textAlign = 'center';
+            input.style.fontWeight = 'bold';
+            
+            this.textContent = '';
+            this.appendChild(input);
+            input.focus();
+            
+            input.addEventListener('blur', function() {
+                const newAmount = parseInt(this.value) || 0;
+                raised = newAmount;
+                document.getElementById('raisedAmount').textContent = '$' + newAmount.toLocaleString();
+                
+                const progressPercent = (newAmount / goal) * 100;
+                document.getElementById('progressBar').style.width = progressPercent + '%';
+            });
+        });
+    </script>
+</body>
+  </html>
