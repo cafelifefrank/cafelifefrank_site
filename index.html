@@ -1,15 +1,108 @@
-Support Frank's Coffee Van * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; } body { background: #f3f4f6; color: #111827; padding: 2rem; line-height: 1.6; } .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 1rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); padding: 2rem; } h1 { font-size: 2rem; margin-bottom: 1rem; color: #1f2937; } h2 { font-size: 1.25rem; margin: 1.5rem 0 1rem; color: #374151; } .quote { font-style: italic; margin: 1rem 0; color: #6b7280; } .wallet { background: #f9fafb; border: 1px solid #d1d5db; border-radius: 0.5rem; padding: 1rem; margin-bottom: 1rem; } .wallet label { font-weight: 600; display: block; margin-bottom: 0.5rem; } .wallet input { width: 100%; border: 1px solid #d1d5db; padding: 0.5rem; border-radius: 0.375rem; font-size: 0.9rem; } button.copy-btn { margin-top: 0.5rem; background-color: #3b82f6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.375rem; cursor: pointer; font-size: 0.85rem; } button.copy-btn:hover { background-color: #2563eb; } 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support Frank's Coffee Van Dream</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0f0f0, #ffffff);
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: #333;
+    }
+    .goal {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .quote {
+      font-style: italic;
+      text-align: center;
+      margin: 1.5rem 0;
+      color: #555;
+    }
+    .wallet {
+      margin-bottom: 1.2rem;
+      background: #f9f9f9;
+      padding: 0.8rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+    .wallet span {
+      overflow-wrap: break-word;
+    }
+    button {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Help Me Build My Coffee Van ☕🚐</h1>
+    <p>
+      I'm Frank — I lost my business but not my hope. With your help, I’m starting over with a dream: turning a van into a coffee shop to earn a living and support the community.
+    </p>
+    <div class="goal">🎯 Goal: $150,000 | Raised: $0</div>
 
-Help Me Build My Coffee Van ☕🚐 
+    <div class="quote">
+      “God loves hands that help more than lips that pray.”
+    </div>
 
-I'm Frank — I lost my business but not my hope. With your help, I'm starting fresh with a dream: turning a van into a coffee shop to earn a living and give back to the community. 
+    <p>
+      I, Frank, will never forget your kindness. I remember how I lost everything, and I will always remember how your support brought me back to life. Once my mobile coffee van is running, I will donate a portion of my income forever to help children in need. ❤️
+    </p>
 
-🎯 Goal: $150,000 | Raised: $0
+    <h3>Donate with crypto:</h3>
 
-"God loves hands that help more than lips that pray."
+    <div class="wallet"><span>USDT (TON): UQBxgaorWWKRliRJZ4h_ts1VqhaTdQob0bQMaouXS4UNAWxI</span> <button onclick="copy(this)">Copy</button></div>
+    <div class="wallet"><span>BTC: bc1qttcuhr3u47x83tnke48hluhzcm3dl8ctzytaht</span> <button onclick="copy(this)">Copy</button></div>
+    <div class="wallet"><span>ETH: 0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</span> <button onclick="copy(this)">Copy</button></div>
+    <div class="wallet"><span>BCH: qpg7xqp8fv3nrehk7zgs7aj67wyvwllxlcgs5f9nqs</span> <button onclick="copy(this)">Copy</button></div>
+    <div class="wallet"><span>DOGE: DJJjYxzWh4dvURBs32tYH1Qe6W1XPZYNtd</span> <button onclick="copy(this)">Copy</button></div>
+    <div class="wallet"><span>FTM: 0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</span> <button onclick="copy(this)">Copy</button></div>
+    <div class="wallet"><span>BNB: 0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</span> <button onclick="copy(this)">Copy</button></div>
+    <div class="wallet"><span>TON: UQAELlWgrJ8_sX4o-uElc2Bj00ME0bkxbTmwLlYDQfu4SeW4</span> <button onclick="copy(this)">Copy</button></div>
+    <div class="wallet"><span>SOL: GLu2BUsam7tyAhTo4c4ACYKMTSYeyqpTxKAb5choDDhV</span> <button onclick="copy(this)">Copy</button></div>
+    <div class="wallet"><span>TRX: TN67UXQbJjoYRZq3nKiYMSCp3KW74VFogJ</span> <button onclick="copy(this)">Copy</button></div>
+    <div class="wallet"><span>SUI: 0x137f36e13b9bf312a238ca3c3a04c944ace8cda5fad0e9fd8f4c69c5584ab150</span> <button onclick="copy(this)">Copy</button></div>
+  </div>
 
-I, Frank, will never forget your kindness. After launching my coffee van, a portion of my income will always go to children in need. ❤️ 
-
-Donate with Crypto <div class="wallet"> <label>USDT (TON):</label> <input id="usdt" value="UQBxgaorWWKRliRJZ4h_ts1VqhaTdQob0bQMaouXS4UNAWxI" readonly /> <button class="copy-btn" onclick="copyText('usdt')">Copy</button> </div> <div class="wallet"> <label>Bitcoin (BTC):</label> <input id="btc" value="bc1qttcuhr3u47x83tnke48hluhzcm3dl8ctzytaht" readonly /> <button class="copy-btn" onclick="copyText('btc')">Copy</button> </div> <div class="wallet"> <label>Ethereum (ETH):</label> <input id="eth" value="0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f" readonly /> <button class="copy-btn" onclick="copyText('eth')">Copy</button> </div> <div class="wallet"> <label>Bitcoin Cash (BCH):</label> <input id="bch" value="qpg7xqp8fv3nrehk7zgs7aj67wyvwllxlcgs5f9nqs" readonly /> <button class="copy-btn" onclick="copyText('bch')">Copy</button> </div> <div class="wallet"> <label>DOGE:</label> <input id="doge" value="DJJjYxzWh4dvURBs32tYH1Qe6W1XPZYNtd" readonly /> <button class="copy-btn" onclick="copyText('doge')">Copy</button> </div> <div class="wallet"> <label>Fantom (FTM):</label> <input id="ftm" value="0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f" readonly /> <button class="copy-btn" onclick="copyText('ftm')">Copy</button> </div> <div class="wallet"> <label>BNB:</label> <input id="bnb" value="0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f" readonly /> <button class="copy-btn" onclick="copyText('bnb')">Copy</button> </div> <div class="wallet"> <label>TON:</label> <input id="ton" value="UQAELlWgrJ8_sX4o-uElc2Bj00ME0bkxbTmwLlYDQfu4SeW4" readonly /> <button class="copy-btn" onclick="copyText('ton')">Copy</button> </div> <div class="wallet"> <label>Solana (SOL):</label> <input id="sol" value="GLu2BUsam7tyAhTo4c4ACYKMTSYeyqpTxKAb5choDDhV" readonly /> <button class="copy-btn" onclick="copyText('sol')">Copy</button> </div> <div class="wallet"> <label>TRX:</label> <input id="trx" value="TN67UXQbJjoYRZq3nKiYMSCp3KW74VFogJ" readonly /> <button class="copy-btn" onclick="copyText('trx')">Copy</button> </div> <div class="wallet"> <label>Sui:</label> <input id="sui" value="0x137f36e13b9bf312a238ca3c3a04c944ace8cda5fad0e9fd8f4c69c5584ab150" readonly /> <button class="copy-btn" onclick="copyText('sui')">Copy</button> </div> 
-
-function copyText(id) { const input = document.getElementById(id); input.select(); input.setSelectionRange(0, 99999); document.execCommand("copy"); alert("Copied address: " + input.value); } 
+  <script>
+    function copy(button) {
+      const text = button.parentElement.querySelector("span").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        button.innerText = "Copied!";
+        setTimeout(() => (button.innerText = "Copy"), 2000);
+      });
+    }
+  </script>
+</body>
+</html>
